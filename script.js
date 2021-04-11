@@ -1,2 +1,3 @@
 alert('Click that');
-alert("You're never going to achieve anything, give up trying already!!!")
+
+document.getElementById('attention').innerHTML = "Everything's gonna be fine, Jesus is with you";

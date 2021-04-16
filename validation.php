@@ -29,6 +29,4 @@ if(isset($_POST['name'])){
     echo "<h4>You've added a new user to database</h4>";
     //sql command that adds user to database ... INSERT INTO DATABASE
 } 
-
-
 ?>

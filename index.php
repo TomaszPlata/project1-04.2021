@@ -17,15 +17,22 @@
     <form action="validation.php" method="post">
         Name: <input type="text" name="name" id="">
         <?php
-            session_start();
-            echo '<p>Name must be between 3 and 20 characters!'.$_SESSION['e_name'].'</p>';
-            session_unset();
+            if(isset($_SESSION['e_name'])){
+                echo '<div>'.$_SESSION['e_name'].'</div>';
+            }
+            unset($_SESSION['e_name']);
         ?>
 
         <br>
         E-mail: <input type="email" name="email" id="">
         <br>
         Phone number: <input type="number" name="phone" id="">
+        <?php
+            if(isset($_SESSION['e_phone'])){
+                echo $_SESSION['e_phone'];
+            }
+            unset($_SESSION['e_phone']);
+        ?>
         <br>
         <input type="submit" value="Submit credentials">
 

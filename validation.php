@@ -22,11 +22,21 @@ if(isset($_POST['name'])){
         //phone validation error
         $everything_ok=false;
         $_SESSION['e_phone']="Phone number should have nine digits";
-        header('location:index.php')
+        header('location:index.php');
     }
+    
+    //email validation
+    $emailv = filter_var($email, FILTER_SANITIZE_EMAIL);
 
+    if (!(filter_var($emailv, FILTER_VALIDATE_EMAIL)&&($email==$emailv)) {
+        $everything_ok=false;
+        $_SESSION['e_email']="E-mail validation failed";
+        header('location:index.php');
+    }
+    
+    
     $everything_ok == true;
     echo "<h4>You've added a new user to database</h4>";
-    //sql command that adds user to database ... INSERT INTO DATABASE
+    //sql command that adds user to database ... INSERT INTO DATABASE and so on
 } 
 ?>

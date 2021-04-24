@@ -11,5 +11,6 @@ html, body
     color: darkgreen;
     background-color: lightsalmon;
     font-size: large;
+    border-style: dashed 1px yellow;
 }
 

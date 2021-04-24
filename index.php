@@ -19,10 +19,8 @@
         <input type="number" name="" id="number1">
         <input type="number" name="" id="number2">
         <br>
-        <input type="button" value="Add">
-        <input type="button" value="Multiply">
-        
-        <input type="submit" value="Submit" onclick= "calculator()">
+        <input type="button" value="Add" id="1" onclick="calculator()">
+        <input type="button" value="Multiply" id="2" onclick="calculator()">
         <br>
         <p id="result"></p>
 </nav>
